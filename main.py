@@ -12,7 +12,7 @@ def menu():
         """
             Bienvenue dans le programme de résolution d'équation
 [1] Second degré
-[2] Premier degré
+[2] pass
 [3] Quitter
 """
     )
