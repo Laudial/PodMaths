@@ -18,8 +18,12 @@ def runQE():
 
     print(f"Equation : {a:.0f}x² + {b:.0f}x + {c:.0f}\n")
     print(deltaCalc(a, b, c))
-    plot_trinome(a, b, c)
-
+    
+    graph = input("\nAfficher le graphique ? (O/N)")
+    if graph.lower() == "o":
+        plot_trinome(a, b, c)
+    else:
+        return None
 
 def trinome(a, b, c, x):
     return a * x**2 + b * x + c
