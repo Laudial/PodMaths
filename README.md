@@ -26,7 +26,7 @@ pip3 install -r requirements.txt
 1. **Lancement du programme :** Pour utiliser l"utilitaire, exécutez le programme dans un terminal de commandes :
 
     ```bash
-	    python3 main.py
+	python3 main.py
     ```
 2. **Entrée de l'utilisateur :** Une fois le programme lancé, choissez le résolveur d'équation nécessaire :
 ![Example 1](https://imgur.com/a/Ku0Vpss)
