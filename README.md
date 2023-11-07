@@ -30,7 +30,7 @@ pip3 install -r requirements.txt
     ```
 2. **Entrée de l'utilisateur :** Une fois le programme lancé, choissez le résolveur d'équation nécessaire :
 
-![Example 1](https://imgur.com/a/9AgUEFD)
+	![Example 1](https://imgur.com/a/9AgUEFD)
 
 ## Licence
 
