@@ -11,11 +11,6 @@ def clear():
 def trinome(a, b, c, x):
     return a * x**2 + b * x + c
 
-
-def discriminant(a, b, c):
-    return b**2 - 4 * a * c
-
-
 def plot_trinome(a, b, c):
     # L'intervalle de trace
     x = np.linspace(-10, 10, 100)
@@ -32,6 +27,9 @@ def plot_trinome(a, b, c):
 
     plt.show()
 
+def discriminant(a, b, c):
+    return b**2 - 4 * a * c
+
 def deltaCalc(a, b, c):
     delta = discriminant(a, b, c)
     if delta > 0:
@@ -43,7 +41,6 @@ def deltaCalc(a, b, c):
         return f"Solution : {s0:.2f}"
     else:
         return "Aucune solution"
-
 
 if __name__ == "__main__":
     clear()
