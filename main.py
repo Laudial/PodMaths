@@ -1,13 +1,8 @@
-import os
+from src import func as f
 from src import quadraticEquation as qe
 
-
-def clear():
-    os.system("cls" if os.name == "nt" else "clear")
-
-
 def menu():
-    clear()
+    f.clear()
     print(
         """
             Bienvenue dans le programme de résolution d'équation
@@ -29,7 +24,7 @@ if __name__ == "__main__":
                 menu()
                 pass
             elif choice == 3:
-                clear()
+                f.clear()
                 print("Au revoir")
                 break
             else:

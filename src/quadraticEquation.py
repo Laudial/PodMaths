@@ -1,20 +1,17 @@
-import os
 import math
 import numpy as np
 import matplotlib.pyplot as plt
-
-def clear():
-    os.system("cls" if os.name == "nt" else "clear")
+from src import func as f
 
 
 def runQE():
-    clear()
+    f.clear()
 
     a = float(input("Valeur de A: "))
     b = float(input("Valeur de B: "))
     c = float(input("Valeur de C: "))
 
-    clear()
+    f.clear()
 
     print(f"Equation : {a:.0f}x² + {b:.0f}x + {c:.0f}\n")
     print(deltaCalc(a, b, c))
