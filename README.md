@@ -24,7 +24,7 @@ py -m pip install -r requirements.txt
 
 Linux :
 ```bash
-py -m pip install -r requirements.txt
+python3 pip install -r requirements.txt
 ```
 
 ## Utilisation
@@ -37,7 +37,7 @@ py -m pip install -r requirements.txt
     ```
     Linux :
     ```bash
-	python3 -m main.py
+	python3 main.py
     ```
 
 ## Licence
