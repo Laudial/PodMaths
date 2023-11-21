@@ -18,7 +18,7 @@ git clone https://github.com/Laudial/PodMaths.git
 Pour installer les dépendances requises pour ce projet, vous pouvez utiliser pip3. Assurez-vous d'être dans le répertoire du projet où se trouve le fichier requirements.txt, puis exécutez la commande suivante :
 
 ```bash
-pip3 install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ## Utilisation
@@ -26,11 +26,11 @@ pip3 install -r requirements.txt
 1. **Lancement du programme :** Pour utiliser l"utilitaire, exécutez le programme dans un terminal de commandes :
 
     ```bash
-	python3 main.py
+	python3 -m main.py
     ```
 2. **Entrée de l'utilisateur :** Une fois le programme lancé, choissez le résolveur d'équation nécessaire :
 
-	![Example 1](https://imgur.com/a/9AgUEFD)
+   !(Example 1)[https://imgur.com/a/9AgUEFD]
 
 ## Licence
 
