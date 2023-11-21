@@ -28,11 +28,13 @@ def trinome(a, b, c, x):
 
 
 def plot_trinome(a, b, c):
-    # L'intervalle de trace
-    x = np.linspace(-10, 10, 100)
+    plt.figure(f"Trinôme {a:.0f}x² + {b:.0f}x + {c:.0f}")
 
     # Le titre
-    plt.title(f"Courbe de la fonction {a:.0f}x² + {b:.0f}x + {c:.0f}")
+    plt.title(f"{a:.0f}x² + {b:.0f}x + {c:.0f}")
+
+    # L'intervalle de trace
+    x = np.linspace(-10, 10, 100)
 
     # La courbe
     plt.plot(x, trinome(a, b, c, x))
