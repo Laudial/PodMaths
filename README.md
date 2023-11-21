@@ -28,10 +28,6 @@ python3 -m pip install -r requirements.txt
     ```bash
 	python3 -m main.py
     ```
-2. **Entrée de l'utilisateur :** Une fois le programme lancé, choissez le résolveur d'équation nécessaire :
-
-   ![Example 1](https://imgur.com/a/9AgUEFD)
-   # <img alt="Example 1" src="https://imgur.com/a/9AgUEFD.png">
 
 ## Licence
 
