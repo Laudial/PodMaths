@@ -22,16 +22,14 @@ def runQE():
     else:
         return None
 
-
 def trinome(a, b, c, x):
     return a * x**2 + b * x + c
-
 
 def plot_trinome(a, b, c):
     plt.figure(f"Trinôme {a:.0f}x² + {b:.0f}x + {c:.0f}")
 
     # Le titre
-    plt.title(f"{a:.0f}x² + {b:.0f}x + {c:.0f}")
+    plt.title(f"f(x) = {a:.0f}x² + {b:.0f}x + {c:.0f}")
 
     # L'intervalle de trace
     x = np.linspace(-10, 10, 100)

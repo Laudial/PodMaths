@@ -1,3 +1,7 @@
+# Author 1: BEGUE Laurier
+# Author 2: BOULET Kylan
+
+# Importation des bibliothèques
 from src import func as f
 from src import quadraticEquation as qe
 
@@ -6,13 +10,13 @@ def menu():
     print(
         """
             Bienvenue dans le programme de résolution d'équation
-[1] Second degré
-[2] pass
-[3] Quitter
+    [1] Second degré
+    [2] pass
+    [3] Quitter
 """
     )
 
-
+# Programme principal
 if __name__ == "__main__":
     while True:
         try:
