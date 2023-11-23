@@ -1,0 +1,17 @@
+Fonction equationFD(a, b)
+    Si a = 0
+        Si b = 0
+            Retourner "L'équation a une infinité de solutions."
+        Sinon
+            Retourner "L'équation n'a pas de solution."
+    Sinon
+        solution <- -b / a
+        Retourner "La solution de l'équation est : " + formater(solution, 2)
+
+Fonction runEFD()
+    Effacer l'écran
+    a <- Entrée_utilisateur("Coefficient de x : ")
+    b <- Entrée_utilisateur("Terme constant : ")
+    Effacer l'écran
+    Afficher "Equation : " + formater(a, 0) + "x + " + formater(b, 0) + " = 0\n"
+    Afficher equationPremierDegre(a, b)

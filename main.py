@@ -4,17 +4,20 @@
 # Importation des bibliothèques
 from src import func as f
 from src import quadraticEquation as qe
+from src import FDEquation as fde
+
 
 def menu():
     f.clear()
     print(
         """
             Bienvenue dans le programme de résolution d'équation
-    [1] Second degré
-    [2] pass
-    [3] Quitter
+[1] Second degré
+[2] Premier degré
+[3] Quitter
 """
     )
+
 
 # Programme principal
 if __name__ == "__main__":
@@ -25,8 +28,7 @@ if __name__ == "__main__":
             if choice == 1:
                 qe.runQE()
             elif choice == 2:
-                menu()
-                pass
+                fde.runEFD()
             elif choice == 3:
                 f.clear()
                 print("Au revoir")
