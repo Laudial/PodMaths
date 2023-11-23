@@ -1,5 +1,4 @@
-# Author 1: BEGUE Laurier
-# Author 2: BOULET Kylan
+# Author : BEGUE Laurier
 
 # Importation des bibliothèques
 from src import Interface as IHM
