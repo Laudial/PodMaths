@@ -1,46 +1,67 @@
+from tkinter import messagebox
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+import tkinter as tk
 from src import func as f
 
 
 def runEFD():
-    f.clear()
+    root = tk.Tk()
+    root.title("Équation du Premier Degré")
 
-    a = float(input("Coefficient de x : "))
-    b = float(input("Terme constant : "))
+    label_a = tk.Label(root, text="Coefficient de x:")
+    label_b = tk.Label(root, text="Terme constant:")
 
-    f.clear()
+    entry_a = tk.Entry(root)
+    entry_b = tk.Entry(root)
 
-    print("\nEquation :", f"{a:.0f}x + {b:.0f} = 0\n")
-    print(equationFD(a, b))
+    label_a.grid(row=0, column=0, padx=5, pady=5)
+    label_b.grid(row=1, column=0, padx=5, pady=5)
+    entry_a.grid(row=0, column=1, padx=5, pady=5)
+    entry_b.grid(row=1, column=1, padx=5, pady=5)
 
-    graph = input("\nAfficher le graphique ? (O/N) ")
-    if graph.lower() == "o":
-        plot_equation(a, b)
-    else:
-        return None
+    def solve_first_degree():
+        try:
+            a = float(entry_a.get())
+            b = float(entry_b.get())
+            result = equationFD(a, b)
+            messagebox.showinfo("Résultat", result)
+
+            if messagebox.askyesno("Graphique", "Afficher le graphique ?"):
+                plot_equation(a, b)
+
+        except ValueError:
+            messagebox.showerror(
+                "Erreur", "Veuillez entrer des valeurs numériques valides."
+            )
+
+    solve_button = tk.Button(root, text="Résoudre", command=solve_first_degree)
+    solve_button.grid(row=2, columnspan=2, pady=10)
+
+    root.mainloop()
 
 
 def plot_equation(a, b):
-    plt.figure("Equation du Premier Degré")
+    root = tk.Tk()
+    root.title("Graphique de l'Équation du Premier Degré")
 
-    # Le titre
-    plt.title(f"Equation :{a:.0f}x + {b:.0f} = 0")
-
-    # La courbe
+    fig, ax = plt.subplots()
     x = np.linspace(-10, 10, 100)
     y = a * x + b
+    ax.plot(x, y, label=f"{a:.0f}x + {b:.0f}")
 
-    plt.plot(x, y, label=f"{a:.0f}x + {b:.0f}")
+    ax.axhline(0, color="black", linewidth=0.5)
+    ax.axvline(0, color="black", linewidth=0.5)
+    ax.set_xlabel("x : abscisse")
+    ax.set_ylabel("y : ordonnée")
+    ax.legend()
 
-    # Les axes
-    plt.axhline(0, color="black", linewidth=0.5)
-    plt.axvline(0, color="black", linewidth=0.5)
-    axes = plt.gca()
-    axes.set_xlabel("x : abscisse")
-    axes.set_ylabel("y : ordonnée")
+    canvas = FigureCanvasTkAgg(fig, master=root)
+    canvas.draw()
+    canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
 
-    plt.show()
+    root.mainloop()
 
 
 def equationFD(a, b):
